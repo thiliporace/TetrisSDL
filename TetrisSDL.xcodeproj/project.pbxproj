@@ -7,20 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F1F34F52E3673B40094FB14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F34F42E3673B40094FB14 /* AppDelegate.m */; };
 		8F1F34F72E3673B50094FB14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F34F62E3673B50094FB14 /* Assets.xcassets */; };
-		8F1F34FA2E3673B50094FB14 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F34F92E3673B50094FB14 /* Base */; };
-		8F1F34FC2E3673B50094FB14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F34FB2E3673B50094FB14 /* main.m */; };
+		8F1F35072E3674250094FB14 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1F35042E3674250094FB14 /* SDL2.framework */; };
+		8F1F35082E3674250094FB14 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1F35042E3674250094FB14 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8F1F35092E3674250094FB14 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1F35052E3674250094FB14 /* SDL2_image.framework */; };
+		8F1F350A2E3674250094FB14 /* SDL2_image.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1F35052E3674250094FB14 /* SDL2_image.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8F1F350B2E3674250094FB14 /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1F35062E3674250094FB14 /* SDL2_ttf.framework */; };
+		8F1F350C2E3674250094FB14 /* SDL2_ttf.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1F35062E3674250094FB14 /* SDL2_ttf.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8F1F350F2E3674340094FB14 /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1F350E2E3674340094FB14 /* SDL2_mixer.framework */; };
+		8F1F35102E3674340094FB14 /* SDL2_mixer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1F350E2E3674340094FB14 /* SDL2_mixer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8F1F35122E3674640094FB14 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F35112E3674640094FB14 /* main.cpp */; };
+		8F1F35162E3674B20094FB14 /* SdlManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F35142E3674B20094FB14 /* SdlManager.cpp */; };
+		8F1F351A2E3676320094FB14 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F35182E3676320094FB14 /* GameObject.cpp */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8F1F350D2E3674250094FB14 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8F1F35082E3674250094FB14 /* SDL2.framework in Embed Frameworks */,
+				8F1F35102E3674340094FB14 /* SDL2_mixer.framework in Embed Frameworks */,
+				8F1F350C2E3674250094FB14 /* SDL2_ttf.framework in Embed Frameworks */,
+				8F1F350A2E3674250094FB14 /* SDL2_image.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8F1F34F02E3673B40094FB14 /* TetrisSDL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TetrisSDL.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F1F34F32E3673B40094FB14 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		8F1F34F42E3673B40094FB14 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8F1F34F62E3673B50094FB14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8F1F34F92E3673B50094FB14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		8F1F34FB2E3673B50094FB14 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8F1F34FD2E3673B50094FB14 /* TetrisSDL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TetrisSDL.entitlements; sourceTree = "<group>"; };
+		8F1F35042E3674250094FB14 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		8F1F35052E3674250094FB14 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
+		8F1F35062E3674250094FB14 /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
+		8F1F350E2E3674340094FB14 /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = ../../../../../Library/Frameworks/SDL2_mixer.framework; sourceTree = "<group>"; };
+		8F1F35112E3674640094FB14 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8F1F35142E3674B20094FB14 /* SdlManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SdlManager.cpp; sourceTree = "<group>"; };
+		8F1F35152E3674B20094FB14 /* SdlManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SdlManager.hpp; sourceTree = "<group>"; };
+		8F1F35182E3676320094FB14 /* GameObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameObject.cpp; sourceTree = "<group>"; };
+		8F1F35192E3676320094FB14 /* GameObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameObject.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +58,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F1F35072E3674250094FB14 /* SDL2.framework in Frameworks */,
+				8F1F350F2E3674340094FB14 /* SDL2_mixer.framework in Frameworks */,
+				8F1F350B2E3674250094FB14 /* SDL2_ttf.framework in Frameworks */,
+				8F1F35092E3674250094FB14 /* SDL2_image.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +73,7 @@
 			children = (
 				8F1F34F22E3673B40094FB14 /* TetrisSDL */,
 				8F1F34F12E3673B40094FB14 /* Products */,
+				8F1F35032E3674250094FB14 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,14 +88,42 @@
 		8F1F34F22E3673B40094FB14 /* TetrisSDL */ = {
 			isa = PBXGroup;
 			children = (
-				8F1F34F32E3673B40094FB14 /* AppDelegate.h */,
-				8F1F34F42E3673B40094FB14 /* AppDelegate.m */,
+				8F1F35172E3676250094FB14 /* Objects */,
+				8F1F35132E36749F0094FB14 /* Singletons */,
 				8F1F34F62E3673B50094FB14 /* Assets.xcassets */,
-				8F1F34F82E3673B50094FB14 /* MainMenu.xib */,
-				8F1F34FB2E3673B50094FB14 /* main.m */,
 				8F1F34FD2E3673B50094FB14 /* TetrisSDL.entitlements */,
+				8F1F35112E3674640094FB14 /* main.cpp */,
 			);
 			path = TetrisSDL;
+			sourceTree = "<group>";
+		};
+		8F1F35032E3674250094FB14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F1F350E2E3674340094FB14 /* SDL2_mixer.framework */,
+				8F1F35052E3674250094FB14 /* SDL2_image.framework */,
+				8F1F35062E3674250094FB14 /* SDL2_ttf.framework */,
+				8F1F35042E3674250094FB14 /* SDL2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F1F35132E36749F0094FB14 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				8F1F35142E3674B20094FB14 /* SdlManager.cpp */,
+				8F1F35152E3674B20094FB14 /* SdlManager.hpp */,
+			);
+			path = Singletons;
+			sourceTree = "<group>";
+		};
+		8F1F35172E3676250094FB14 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				8F1F35182E3676320094FB14 /* GameObject.cpp */,
+				8F1F35192E3676320094FB14 /* GameObject.hpp */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -73,6 +136,7 @@
 				8F1F34EC2E3673B40094FB14 /* Sources */,
 				8F1F34ED2E3673B40094FB14 /* Frameworks */,
 				8F1F34EE2E3673B40094FB14 /* Resources */,
+				8F1F350D2E3674250094FB14 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -121,7 +185,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F1F34F72E3673B50094FB14 /* Assets.xcassets in Resources */,
-				8F1F34FA2E3673B50094FB14 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,23 +195,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F1F34FC2E3673B50094FB14 /* main.m in Sources */,
-				8F1F34F52E3673B40094FB14 /* AppDelegate.m in Sources */,
+				8F1F35122E3674640094FB14 /* main.cpp in Sources */,
+				8F1F35162E3674B20094FB14 /* SdlManager.cpp in Sources */,
+				8F1F351A2E3676320094FB14 /* GameObject.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		8F1F34F82E3673B50094FB14 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8F1F34F92E3673B50094FB14 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8F1F34FE2E3673B50094FB14 /* Debug */ = {
@@ -275,6 +328,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
@@ -299,6 +356,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
