@@ -12,56 +12,48 @@ using namespace std;
 
 SdlManager* SdlManager::instance = nullptr;
 
-SdlManager::SdlManager(){
-    initializeSDL();
-}
-
-const void SdlManager::initializeSDL(){
-    if (SDL_Init(SDL_INIT_EVERYTHING) < 0){
-        cout << "Error Init: " << SDL_GetError() << endl;
+SdlManager::SdlManager() {
+    if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+        std::cout << "SDL could not initialize! SDL_Error: " << SDL_GetError() << std::endl;
         return;
     }
-    
-    initializeSDLWindow();
-    initializeSDLRenderer();
-}
 
-const void SdlManager::initializeSDLWindow(){
-    window = SDL_CreateWindow("Peggle.", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 800, 600, SDL_WINDOW_SHOWN);
-    
-    if (!window){
-        cout << "Error Window: " << SDL_GetError() << endl;
+    window = SDL_CreateWindow("Tetris", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 800, 600, SDL_WINDOW_SHOWN);
+    if (window == nullptr) {
+        std::cout << "Window could not be created! SDL_Error: " << SDL_GetError() << std::endl;
         return;
     }
-}
 
-const void SdlManager::initializeSDLRenderer(){
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-    
-    if (!renderer){
-        cout << "Error Renderer: " << SDL_GetError() << endl;
+    if (renderer == nullptr) {
+        std::cout << "Renderer could not be created! SDL_Error: " << SDL_GetError() << std::endl;
         return;
     }
+
+    int imgFlags = IMG_INIT_PNG;
+    if (!(IMG_Init(imgFlags) & imgFlags)) {
+        std::cout << "SDL_image could not initialize! IMG_Error: " << IMG_GetError() << std::endl;
+    }
+}
+
+SdlManager::~SdlManager() {
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(window);
+    IMG_Quit();
+    SDL_Quit();
 }
 
 SdlManager* SdlManager::getInstance() {
-    if (!instance){
+    if (instance == nullptr) {
         instance = new SdlManager();
     }
     return instance;
 }
 
-SDL_Renderer* SdlManager::getRenderer(){
+SDL_Renderer* SdlManager::getRenderer() {
     return renderer;
 }
 
-SDL_Window* SdlManager::getWindow(){
+SDL_Window* SdlManager::getWindow() {
     return window;
-}
-
-SdlManager::~SdlManager(){
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
-    IMG_Quit();
-    SDL_Quit();
 }

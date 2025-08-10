@@ -11,28 +11,19 @@
 #include <list>
 
 #include "SdlManager.hpp"
-#include "GameObject.hpp"
+#include <functional>
+#include "SdlManager.hpp"
+#include "Game.hpp"
+
+using namespace std;
 
 //60 FPS
 //const float MS_PER_UPDATE = 0.016;
 //240 FPS
 const float MS_PER_UPDATE = 0.004;
 
-//Armazena todos os objetos na cena pra atualizar todos de uma vez
-std::list<std::shared_ptr<GameObject>> gameObjectsInScene; //Ponteiros inteligentes pra evitar problemas com gerenciamento de mem
-
 float getCurrentTime(){
     return SDL_GetTicks() / 1000.0f;
-}
-
-void update(float deltaTime){
-    for (auto& gameObject : gameObjectsInScene){
-        gameObject->update(deltaTime);
-    }
-}
-
-void render(SDL_Renderer* renderer){
-    
 }
 
 int main(){
@@ -40,6 +31,8 @@ int main(){
     SdlManager* sdlManager = SdlManager::getInstance();
     
     SDL_Renderer* renderer = sdlManager->getRenderer();
+    
+    auto game = std::make_unique<Game>(renderer);
     
     SDL_Event event;
     bool quit = false;
@@ -52,6 +45,28 @@ int main(){
     int renderFrames = 0;
     int updateFrames = 0;
     
+    std::function<void(const SDL_Event&)> currentHandleInput;
+    std::function<void(float)> currentUpdate;
+
+    auto gameOverUpdate = [](float dt){};
+    auto gameOverInput = [](const SDL_Event& e){};
+
+    auto playingUpdate = [&](float dt) {
+        game->update(dt);
+        if (game->isGameOver()) {
+            std::cout << "Game Over!" << std::endl;
+            currentUpdate = gameOverUpdate;
+            currentHandleInput = gameOverInput;
+        }
+    };
+    
+    auto playingInput = [&](const SDL_Event& e) {
+        game->handleInput(e);
+    };
+
+    currentUpdate = playingUpdate;
+    currentHandleInput = playingInput;
+    
     while (!quit){
        double current = getCurrentTime();
        double elapsed = current - previous;
@@ -59,19 +74,20 @@ int main(){
        lag += elapsed;
        fpsCounter += elapsed;
        
-       while(SDL_PollEvent(&event)){
+       while(SDL_PollEvent(&event) != 0){
            switch(event.type){
                case SDL_QUIT:
                    quit = true;
                    break;
            }
+           currentHandleInput(event);
            
        }
        
        //Usando o Game Programming Pattern Update pra manter uma taxa de frames fixa, com um time step fixo e uma renderização variável (como não passamos lag residual pra renderização, em máquinas mais lentas a renderização pode ocorrer menos frequentemente que o update, causando artefatos visuais. Como essa máquina é meio goat 🐐 (bode 🐐) a renderização sempre roda mais rápido (uns 1000fps enquanto o update roda a uma taxa fixa))
        while (lag >= MS_PER_UPDATE){
+           currentUpdate(MS_PER_UPDATE);
            updateFrames++;
-           update(MS_PER_UPDATE);
            lag -= MS_PER_UPDATE;
        }
        
@@ -84,7 +100,7 @@ int main(){
             fpsCounter -= 1.0f;
         }
        
-       render(renderer);
+       game->render();
        renderFrames++;
    }
     

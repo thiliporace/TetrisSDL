@@ -15,14 +15,14 @@
 
 class GameObject {
 private:
-    SDL_Surface* sprite;
-    
     SDL_Texture* spriteTexture;
     
     float width,height;
 
 protected:
     bool isAlive;
+    
+    SDL_Surface* sprite;
 
 public:
     SDL_FRect position;
@@ -35,6 +35,8 @@ public:
                float xSpeed = 0, float ySpeed = 0, float rotation = 0);
     
     virtual void update(float deltaTime) = 0;
+    
+    virtual void render(SDL_Renderer* renderer);
     
     double degreesToRadians(double degrees);
     

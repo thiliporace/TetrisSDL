@@ -19,6 +19,62 @@
 		8F1F35122E3674640094FB14 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F35112E3674640094FB14 /* main.cpp */; };
 		8F1F35162E3674B20094FB14 /* SdlManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F35142E3674B20094FB14 /* SdlManager.cpp */; };
 		8F1F351A2E3676320094FB14 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F35182E3676320094FB14 /* GameObject.cpp */; };
+		8FFEDF6F2E492B660019E581 /* Tetromino_J1_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF3B2E492B650019E581 /* Tetromino_J1_3.png */; };
+		8FFEDF702E492B660019E581 /* Tetromino_J2_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF3C2E492B650019E581 /* Tetromino_J2_1.png */; };
+		8FFEDF712E492B660019E581 /* Tetromino_J2_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF3D2E492B650019E581 /* Tetromino_J2_3.png */; };
+		8FFEDF722E492B660019E581 /* Tetromino_O1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF3E2E492B650019E581 /* Tetromino_O1_1.png */; };
+		8FFEDF732E492B660019E581 /* Tetromino_block2_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF3F2E492B650019E581 /* Tetromino_block2_2.png */; };
+		8FFEDF742E492B660019E581 /* Tetromino_J1_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF402E492B650019E581 /* Tetromino_J1_2.png */; };
+		8FFEDF752E492B660019E581 /* Tetromino_block2_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF412E492B650019E581 /* Tetromino_block2_6.png */; };
+		8FFEDF762E492B660019E581 /* Tetromino_I2_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF422E492B650019E581 /* Tetromino_I2_1.png */; };
+		8FFEDF772E492B660019E581 /* Tetromino_block1_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF432E492B650019E581 /* Tetromino_block1_2.png */; };
+		8FFEDF782E492B660019E581 /* Tetromino_block2_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF442E492B650019E581 /* Tetromino_block2_4.png */; };
+		8FFEDF792E492B660019E581 /* Tetromino_T1_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF452E492B650019E581 /* Tetromino_T1_3.png */; };
+		8FFEDF7A2E492B660019E581 /* Tetromino_L2_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF462E492B650019E581 /* Tetromino_L2_3.png */; };
+		8FFEDF7B2E492B660019E581 /* Tetromino_J1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF472E492B650019E581 /* Tetromino_J1_1.png */; };
+		8FFEDF7C2E492B660019E581 /* Tetromino_T1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF482E492B650019E581 /* Tetromino_T1_1.png */; };
+		8FFEDF7D2E492B660019E581 /* Tetromino_block1_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF492E492B650019E581 /* Tetromino_block1_3.png */; };
+		8FFEDF7E2E492B660019E581 /* Tetromino_L1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF4A2E492B650019E581 /* Tetromino_L1_1.png */; };
+		8FFEDF7F2E492B660019E581 /* Tetromino_L2_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF4B2E492B650019E581 /* Tetromino_L2_2.png */; };
+		8FFEDF802E492B660019E581 /* Tetromino_Z2_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF4C2E492B650019E581 /* Tetromino_Z2_1.png */; };
+		8FFEDF812E492B660019E581 /* Tetromino_L1_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF4D2E492B650019E581 /* Tetromino_L1_4.png */; };
+		8FFEDF822E492B660019E581 /* Tetromino_T2_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF4E2E492B650019E581 /* Tetromino_T2_1.png */; };
+		8FFEDF832E492B660019E581 /* Tetromino_block2_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF4F2E492B650019E581 /* Tetromino_block2_3.png */; };
+		8FFEDF842E492B660019E581 /* Tetromino_S2_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF502E492B650019E581 /* Tetromino_S2_2.png */; };
+		8FFEDF852E492B660019E581 /* Tetromino_I1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF512E492B650019E581 /* Tetromino_I1_1.png */; };
+		8FFEDF862E492B660019E581 /* Tetromino_S1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF522E492B650019E581 /* Tetromino_S1_1.png */; };
+		8FFEDF872E492B660019E581 /* Tetromino_T1_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF532E492B650019E581 /* Tetromino_T1_4.png */; };
+		8FFEDF882E492B660019E581 /* Tetromino_L2_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF542E492B650019E581 /* Tetromino_L2_1.png */; };
+		8FFEDF892E492B660019E581 /* Tetromino_Z1_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF552E492B650019E581 /* Tetromino_Z1_2.png */; };
+		8FFEDF8A2E492B660019E581 /* Tetromino_T2_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF562E492B650019E581 /* Tetromino_T2_2.png */; };
+		8FFEDF8B2E492B660019E581 /* Tetromino_J1_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF572E492B650019E581 /* Tetromino_J1_4.png */; };
+		8FFEDF8C2E492B660019E581 /* Tetromino_L2_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF582E492B650019E581 /* Tetromino_L2_4.png */; };
+		8FFEDF8D2E492B660019E581 /* Tetromino_S2_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF592E492B650019E581 /* Tetromino_S2_1.png */; };
+		8FFEDF8E2E492B660019E581 /* Tetromino_T1_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF5A2E492B650019E581 /* Tetromino_T1_2.png */; };
+		8FFEDF8F2E492B660019E581 /* Tetromino_I2_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF5B2E492B650019E581 /* Tetromino_I2_2.png */; };
+		8FFEDF902E492B660019E581 /* Tetromino_J2_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF5C2E492B660019E581 /* Tetromino_J2_4.png */; };
+		8FFEDF912E492B660019E581 /* Tetromino_S1_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF5D2E492B660019E581 /* Tetromino_S1_2.png */; };
+		8FFEDF922E492B660019E581 /* Tetromino_I1_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF5E2E492B660019E581 /* Tetromino_I1_2.png */; };
+		8FFEDF932E492B660019E581 /* Tetromino_block1_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF5F2E492B660019E581 /* Tetromino_block1_4.png */; };
+		8FFEDF942E492B660019E581 /* Tetromino_T2_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF602E492B660019E581 /* Tetromino_T2_4.png */; };
+		8FFEDF952E492B660019E581 /* Tetromino_Z1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF612E492B660019E581 /* Tetromino_Z1_1.png */; };
+		8FFEDF962E492B660019E581 /* Tetromino_O1_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF622E492B660019E581 /* Tetromino_O1_2.png */; };
+		8FFEDF972E492B660019E581 /* Tetromino_block1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF632E492B660019E581 /* Tetromino_block1_1.png */; };
+		8FFEDF982E492B660019E581 /* Tetromino_L1_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF642E492B660019E581 /* Tetromino_L1_3.png */; };
+		8FFEDF992E492B660019E581 /* Tetromino_block1_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF652E492B660019E581 /* Tetromino_block1_5.png */; };
+		8FFEDF9A2E492B660019E581 /* Tetromino_Z2_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF662E492B660019E581 /* Tetromino_Z2_2.png */; };
+		8FFEDF9B2E492B660019E581 /* Tetromino_block2_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF672E492B660019E581 /* Tetromino_block2_1.png */; };
+		8FFEDF9C2E492B660019E581 /* Tetromino_L1_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF682E492B660019E581 /* Tetromino_L1_2.png */; };
+		8FFEDF9D2E492B660019E581 /* Tetromino_J2_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF692E492B660019E581 /* Tetromino_J2_2.png */; };
+		8FFEDF9E2E492B660019E581 /* Tetromino_block1_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF6A2E492B660019E581 /* Tetromino_block1_7.png */; };
+		8FFEDF9F2E492B660019E581 /* Tetromino_block1_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF6B2E492B660019E581 /* Tetromino_block1_6.png */; };
+		8FFEDFA02E492B660019E581 /* Tetromino_block2_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF6C2E492B660019E581 /* Tetromino_block2_7.png */; };
+		8FFEDFA12E492B660019E581 /* Tetromino_block2_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF6D2E492B660019E581 /* Tetromino_block2_5.png */; };
+		8FFEDFA22E492B660019E581 /* Tetromino_T2_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF6E2E492B660019E581 /* Tetromino_T2_3.png */; };
+		8FFEDFA52E492C2D0019E581 /* Tetronimo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8FFEDFA32E492C2D0019E581 /* Tetronimo.cpp */; };
+		8FFEDFAA2E492C900019E581 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8FFEDFA82E492C900019E581 /* Game.cpp */; };
+		8FFEDFAD2E493B7F0019E581 /* StaticImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8FFEDFAB2E493B7F0019E581 /* StaticImage.cpp */; };
+		8FFEDFAF2E493CBE0019E581 /* Border.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDFAE2E493CBE0019E581 /* Border.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +107,65 @@
 		8F1F35152E3674B20094FB14 /* SdlManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SdlManager.hpp; sourceTree = "<group>"; };
 		8F1F35182E3676320094FB14 /* GameObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameObject.cpp; sourceTree = "<group>"; };
 		8F1F35192E3676320094FB14 /* GameObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameObject.hpp; sourceTree = "<group>"; };
+		8FFEDF3B2E492B650019E581 /* Tetromino_J1_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_J1_3.png; path = ../../../../Downloads/Tetrominoes/Tetromino_J1_3.png; sourceTree = "<group>"; };
+		8FFEDF3C2E492B650019E581 /* Tetromino_J2_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_J2_1.png; path = ../../../../Downloads/Tetrominoes/Tetromino_J2_1.png; sourceTree = "<group>"; };
+		8FFEDF3D2E492B650019E581 /* Tetromino_J2_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_J2_3.png; path = ../../../../Downloads/Tetrominoes/Tetromino_J2_3.png; sourceTree = "<group>"; };
+		8FFEDF3E2E492B650019E581 /* Tetromino_O1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_O1_1.png; path = ../../../../Downloads/Tetrominoes/Tetromino_O1_1.png; sourceTree = "<group>"; };
+		8FFEDF3F2E492B650019E581 /* Tetromino_block2_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_block2_2.png; path = ../../../../Downloads/Tetrominoes/Tetromino_block2_2.png; sourceTree = "<group>"; };
+		8FFEDF402E492B650019E581 /* Tetromino_J1_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_J1_2.png; path = ../../../../Downloads/Tetrominoes/Tetromino_J1_2.png; sourceTree = "<group>"; };
+		8FFEDF412E492B650019E581 /* Tetromino_block2_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_block2_6.png; path = ../../../../Downloads/Tetrominoes/Tetromino_block2_6.png; sourceTree = "<group>"; };
+		8FFEDF422E492B650019E581 /* Tetromino_I2_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_I2_1.png; path = ../../../../Downloads/Tetrominoes/Tetromino_I2_1.png; sourceTree = "<group>"; };
+		8FFEDF432E492B650019E581 /* Tetromino_block1_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_block1_2.png; path = ../../../../Downloads/Tetrominoes/Tetromino_block1_2.png; sourceTree = "<group>"; };
+		8FFEDF442E492B650019E581 /* Tetromino_block2_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_block2_4.png; path = ../../../../Downloads/Tetrominoes/Tetromino_block2_4.png; sourceTree = "<group>"; };
+		8FFEDF452E492B650019E581 /* Tetromino_T1_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_T1_3.png; path = ../../../../Downloads/Tetrominoes/Tetromino_T1_3.png; sourceTree = "<group>"; };
+		8FFEDF462E492B650019E581 /* Tetromino_L2_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_L2_3.png; path = ../../../../Downloads/Tetrominoes/Tetromino_L2_3.png; sourceTree = "<group>"; };
+		8FFEDF472E492B650019E581 /* Tetromino_J1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_J1_1.png; path = ../../../../Downloads/Tetrominoes/Tetromino_J1_1.png; sourceTree = "<group>"; };
+		8FFEDF482E492B650019E581 /* Tetromino_T1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_T1_1.png; path = ../../../../Downloads/Tetrominoes/Tetromino_T1_1.png; sourceTree = "<group>"; };
+		8FFEDF492E492B650019E581 /* Tetromino_block1_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_block1_3.png; path = ../../../../Downloads/Tetrominoes/Tetromino_block1_3.png; sourceTree = "<group>"; };
+		8FFEDF4A2E492B650019E581 /* Tetromino_L1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_L1_1.png; path = ../../../../Downloads/Tetrominoes/Tetromino_L1_1.png; sourceTree = "<group>"; };
+		8FFEDF4B2E492B650019E581 /* Tetromino_L2_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_L2_2.png; path = ../../../../Downloads/Tetrominoes/Tetromino_L2_2.png; sourceTree = "<group>"; };
+		8FFEDF4C2E492B650019E581 /* Tetromino_Z2_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_Z2_1.png; path = ../../../../Downloads/Tetrominoes/Tetromino_Z2_1.png; sourceTree = "<group>"; };
+		8FFEDF4D2E492B650019E581 /* Tetromino_L1_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_L1_4.png; path = ../../../../Downloads/Tetrominoes/Tetromino_L1_4.png; sourceTree = "<group>"; };
+		8FFEDF4E2E492B650019E581 /* Tetromino_T2_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_T2_1.png; path = ../../../../Downloads/Tetrominoes/Tetromino_T2_1.png; sourceTree = "<group>"; };
+		8FFEDF4F2E492B650019E581 /* Tetromino_block2_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_block2_3.png; path = ../../../../Downloads/Tetrominoes/Tetromino_block2_3.png; sourceTree = "<group>"; };
+		8FFEDF502E492B650019E581 /* Tetromino_S2_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_S2_2.png; path = ../../../../Downloads/Tetrominoes/Tetromino_S2_2.png; sourceTree = "<group>"; };
+		8FFEDF512E492B650019E581 /* Tetromino_I1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_I1_1.png; path = ../../../../Downloads/Tetrominoes/Tetromino_I1_1.png; sourceTree = "<group>"; };
+		8FFEDF522E492B650019E581 /* Tetromino_S1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_S1_1.png; path = ../../../../Downloads/Tetrominoes/Tetromino_S1_1.png; sourceTree = "<group>"; };
+		8FFEDF532E492B650019E581 /* Tetromino_T1_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_T1_4.png; path = ../../../../Downloads/Tetrominoes/Tetromino_T1_4.png; sourceTree = "<group>"; };
+		8FFEDF542E492B650019E581 /* Tetromino_L2_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_L2_1.png; path = ../../../../Downloads/Tetrominoes/Tetromino_L2_1.png; sourceTree = "<group>"; };
+		8FFEDF552E492B650019E581 /* Tetromino_Z1_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_Z1_2.png; path = ../../../../Downloads/Tetrominoes/Tetromino_Z1_2.png; sourceTree = "<group>"; };
+		8FFEDF562E492B650019E581 /* Tetromino_T2_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_T2_2.png; path = ../../../../Downloads/Tetrominoes/Tetromino_T2_2.png; sourceTree = "<group>"; };
+		8FFEDF572E492B650019E581 /* Tetromino_J1_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_J1_4.png; path = ../../../../Downloads/Tetrominoes/Tetromino_J1_4.png; sourceTree = "<group>"; };
+		8FFEDF582E492B650019E581 /* Tetromino_L2_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_L2_4.png; path = ../../../../Downloads/Tetrominoes/Tetromino_L2_4.png; sourceTree = "<group>"; };
+		8FFEDF592E492B650019E581 /* Tetromino_S2_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_S2_1.png; path = ../../../../Downloads/Tetrominoes/Tetromino_S2_1.png; sourceTree = "<group>"; };
+		8FFEDF5A2E492B650019E581 /* Tetromino_T1_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_T1_2.png; path = ../../../../Downloads/Tetrominoes/Tetromino_T1_2.png; sourceTree = "<group>"; };
+		8FFEDF5B2E492B650019E581 /* Tetromino_I2_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_I2_2.png; path = ../../../../Downloads/Tetrominoes/Tetromino_I2_2.png; sourceTree = "<group>"; };
+		8FFEDF5C2E492B660019E581 /* Tetromino_J2_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_J2_4.png; path = ../../../../Downloads/Tetrominoes/Tetromino_J2_4.png; sourceTree = "<group>"; };
+		8FFEDF5D2E492B660019E581 /* Tetromino_S1_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_S1_2.png; path = ../../../../Downloads/Tetrominoes/Tetromino_S1_2.png; sourceTree = "<group>"; };
+		8FFEDF5E2E492B660019E581 /* Tetromino_I1_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_I1_2.png; path = ../../../../Downloads/Tetrominoes/Tetromino_I1_2.png; sourceTree = "<group>"; };
+		8FFEDF5F2E492B660019E581 /* Tetromino_block1_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_block1_4.png; path = ../../../../Downloads/Tetrominoes/Tetromino_block1_4.png; sourceTree = "<group>"; };
+		8FFEDF602E492B660019E581 /* Tetromino_T2_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_T2_4.png; path = ../../../../Downloads/Tetrominoes/Tetromino_T2_4.png; sourceTree = "<group>"; };
+		8FFEDF612E492B660019E581 /* Tetromino_Z1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_Z1_1.png; path = ../../../../Downloads/Tetrominoes/Tetromino_Z1_1.png; sourceTree = "<group>"; };
+		8FFEDF622E492B660019E581 /* Tetromino_O1_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_O1_2.png; path = ../../../../Downloads/Tetrominoes/Tetromino_O1_2.png; sourceTree = "<group>"; };
+		8FFEDF632E492B660019E581 /* Tetromino_block1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_block1_1.png; path = ../../../../Downloads/Tetrominoes/Tetromino_block1_1.png; sourceTree = "<group>"; };
+		8FFEDF642E492B660019E581 /* Tetromino_L1_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_L1_3.png; path = ../../../../Downloads/Tetrominoes/Tetromino_L1_3.png; sourceTree = "<group>"; };
+		8FFEDF652E492B660019E581 /* Tetromino_block1_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_block1_5.png; path = ../../../../Downloads/Tetrominoes/Tetromino_block1_5.png; sourceTree = "<group>"; };
+		8FFEDF662E492B660019E581 /* Tetromino_Z2_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_Z2_2.png; path = ../../../../Downloads/Tetrominoes/Tetromino_Z2_2.png; sourceTree = "<group>"; };
+		8FFEDF672E492B660019E581 /* Tetromino_block2_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_block2_1.png; path = ../../../../Downloads/Tetrominoes/Tetromino_block2_1.png; sourceTree = "<group>"; };
+		8FFEDF682E492B660019E581 /* Tetromino_L1_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_L1_2.png; path = ../../../../Downloads/Tetrominoes/Tetromino_L1_2.png; sourceTree = "<group>"; };
+		8FFEDF692E492B660019E581 /* Tetromino_J2_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_J2_2.png; path = ../../../../Downloads/Tetrominoes/Tetromino_J2_2.png; sourceTree = "<group>"; };
+		8FFEDF6A2E492B660019E581 /* Tetromino_block1_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_block1_7.png; path = ../../../../Downloads/Tetrominoes/Tetromino_block1_7.png; sourceTree = "<group>"; };
+		8FFEDF6B2E492B660019E581 /* Tetromino_block1_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_block1_6.png; path = ../../../../Downloads/Tetrominoes/Tetromino_block1_6.png; sourceTree = "<group>"; };
+		8FFEDF6C2E492B660019E581 /* Tetromino_block2_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_block2_7.png; path = ../../../../Downloads/Tetrominoes/Tetromino_block2_7.png; sourceTree = "<group>"; };
+		8FFEDF6D2E492B660019E581 /* Tetromino_block2_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_block2_5.png; path = ../../../../Downloads/Tetrominoes/Tetromino_block2_5.png; sourceTree = "<group>"; };
+		8FFEDF6E2E492B660019E581 /* Tetromino_T2_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_T2_3.png; path = ../../../../Downloads/Tetrominoes/Tetromino_T2_3.png; sourceTree = "<group>"; };
+		8FFEDFA32E492C2D0019E581 /* Tetronimo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tetronimo.cpp; sourceTree = "<group>"; };
+		8FFEDFA42E492C2D0019E581 /* Tetronimo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tetronimo.hpp; sourceTree = "<group>"; };
+		8FFEDFA82E492C900019E581 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		8FFEDFA92E492C900019E581 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		8FFEDFAB2E493B7F0019E581 /* StaticImage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StaticImage.cpp; sourceTree = "<group>"; };
+		8FFEDFAC2E493B7F0019E581 /* StaticImage.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StaticImage.hpp; sourceTree = "<group>"; };
+		8FFEDFAE2E493CBE0019E581 /* Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Border.png; path = ../../../../Downloads/Tetrominoes/Border.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +186,8 @@
 		8F1F34E72E3673B40094FB14 = {
 			isa = PBXGroup;
 			children = (
+				8FFEDFA72E492C880019E581 /* Game Logic */,
+				8FF73E1A2E49200300038010 /* Assets */,
 				8F1F34F22E3673B40094FB14 /* TetrisSDL */,
 				8F1F34F12E3673B40094FB14 /* Products */,
 				8F1F35032E3674250094FB14 /* Frameworks */,
@@ -122,8 +239,81 @@
 			children = (
 				8F1F35182E3676320094FB14 /* GameObject.cpp */,
 				8F1F35192E3676320094FB14 /* GameObject.hpp */,
+				8FFEDFA32E492C2D0019E581 /* Tetronimo.cpp */,
+				8FFEDFA42E492C2D0019E581 /* Tetronimo.hpp */,
+				8FFEDFAB2E493B7F0019E581 /* StaticImage.cpp */,
+				8FFEDFAC2E493B7F0019E581 /* StaticImage.hpp */,
 			);
 			path = Objects;
+			sourceTree = "<group>";
+		};
+		8FF73E1A2E49200300038010 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8FFEDFAE2E493CBE0019E581 /* Border.png */,
+				8FFEDF632E492B660019E581 /* Tetromino_block1_1.png */,
+				8FFEDF432E492B650019E581 /* Tetromino_block1_2.png */,
+				8FFEDF492E492B650019E581 /* Tetromino_block1_3.png */,
+				8FFEDF5F2E492B660019E581 /* Tetromino_block1_4.png */,
+				8FFEDF652E492B660019E581 /* Tetromino_block1_5.png */,
+				8FFEDF6B2E492B660019E581 /* Tetromino_block1_6.png */,
+				8FFEDF6A2E492B660019E581 /* Tetromino_block1_7.png */,
+				8FFEDF672E492B660019E581 /* Tetromino_block2_1.png */,
+				8FFEDF3F2E492B650019E581 /* Tetromino_block2_2.png */,
+				8FFEDF4F2E492B650019E581 /* Tetromino_block2_3.png */,
+				8FFEDF442E492B650019E581 /* Tetromino_block2_4.png */,
+				8FFEDF6D2E492B660019E581 /* Tetromino_block2_5.png */,
+				8FFEDF412E492B650019E581 /* Tetromino_block2_6.png */,
+				8FFEDF6C2E492B660019E581 /* Tetromino_block2_7.png */,
+				8FFEDF512E492B650019E581 /* Tetromino_I1_1.png */,
+				8FFEDF5E2E492B660019E581 /* Tetromino_I1_2.png */,
+				8FFEDF422E492B650019E581 /* Tetromino_I2_1.png */,
+				8FFEDF5B2E492B650019E581 /* Tetromino_I2_2.png */,
+				8FFEDF472E492B650019E581 /* Tetromino_J1_1.png */,
+				8FFEDF402E492B650019E581 /* Tetromino_J1_2.png */,
+				8FFEDF3B2E492B650019E581 /* Tetromino_J1_3.png */,
+				8FFEDF572E492B650019E581 /* Tetromino_J1_4.png */,
+				8FFEDF3C2E492B650019E581 /* Tetromino_J2_1.png */,
+				8FFEDF692E492B660019E581 /* Tetromino_J2_2.png */,
+				8FFEDF3D2E492B650019E581 /* Tetromino_J2_3.png */,
+				8FFEDF5C2E492B660019E581 /* Tetromino_J2_4.png */,
+				8FFEDF4A2E492B650019E581 /* Tetromino_L1_1.png */,
+				8FFEDF682E492B660019E581 /* Tetromino_L1_2.png */,
+				8FFEDF642E492B660019E581 /* Tetromino_L1_3.png */,
+				8FFEDF4D2E492B650019E581 /* Tetromino_L1_4.png */,
+				8FFEDF542E492B650019E581 /* Tetromino_L2_1.png */,
+				8FFEDF4B2E492B650019E581 /* Tetromino_L2_2.png */,
+				8FFEDF462E492B650019E581 /* Tetromino_L2_3.png */,
+				8FFEDF582E492B650019E581 /* Tetromino_L2_4.png */,
+				8FFEDF3E2E492B650019E581 /* Tetromino_O1_1.png */,
+				8FFEDF622E492B660019E581 /* Tetromino_O1_2.png */,
+				8FFEDF522E492B650019E581 /* Tetromino_S1_1.png */,
+				8FFEDF5D2E492B660019E581 /* Tetromino_S1_2.png */,
+				8FFEDF592E492B650019E581 /* Tetromino_S2_1.png */,
+				8FFEDF502E492B650019E581 /* Tetromino_S2_2.png */,
+				8FFEDF482E492B650019E581 /* Tetromino_T1_1.png */,
+				8FFEDF5A2E492B650019E581 /* Tetromino_T1_2.png */,
+				8FFEDF452E492B650019E581 /* Tetromino_T1_3.png */,
+				8FFEDF532E492B650019E581 /* Tetromino_T1_4.png */,
+				8FFEDF4E2E492B650019E581 /* Tetromino_T2_1.png */,
+				8FFEDF562E492B650019E581 /* Tetromino_T2_2.png */,
+				8FFEDF6E2E492B660019E581 /* Tetromino_T2_3.png */,
+				8FFEDF602E492B660019E581 /* Tetromino_T2_4.png */,
+				8FFEDF612E492B660019E581 /* Tetromino_Z1_1.png */,
+				8FFEDF552E492B650019E581 /* Tetromino_Z1_2.png */,
+				8FFEDF4C2E492B650019E581 /* Tetromino_Z2_1.png */,
+				8FFEDF662E492B660019E581 /* Tetromino_Z2_2.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		8FFEDFA72E492C880019E581 /* Game Logic */ = {
+			isa = PBXGroup;
+			children = (
+				8FFEDFA82E492C900019E581 /* Game.cpp */,
+				8FFEDFA92E492C900019E581 /* Game.hpp */,
+			);
+			path = "Game Logic";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,7 +374,60 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FFEDF9B2E492B660019E581 /* Tetromino_block2_1.png in Resources */,
+				8FFEDF902E492B660019E581 /* Tetromino_J2_4.png in Resources */,
+				8FFEDF752E492B660019E581 /* Tetromino_block2_6.png in Resources */,
+				8FFEDF992E492B660019E581 /* Tetromino_block1_5.png in Resources */,
+				8FFEDF962E492B660019E581 /* Tetromino_O1_2.png in Resources */,
+				8FFEDF8E2E492B660019E581 /* Tetromino_T1_2.png in Resources */,
+				8FFEDF832E492B660019E581 /* Tetromino_block2_3.png in Resources */,
+				8FFEDF9E2E492B660019E581 /* Tetromino_block1_7.png in Resources */,
+				8FFEDF7D2E492B660019E581 /* Tetromino_block1_3.png in Resources */,
+				8FFEDF882E492B660019E581 /* Tetromino_L2_1.png in Resources */,
+				8FFEDF9F2E492B660019E581 /* Tetromino_block1_6.png in Resources */,
+				8FFEDF792E492B660019E581 /* Tetromino_T1_3.png in Resources */,
+				8FFEDF852E492B660019E581 /* Tetromino_I1_1.png in Resources */,
+				8FFEDF812E492B660019E581 /* Tetromino_L1_4.png in Resources */,
 				8F1F34F72E3673B50094FB14 /* Assets.xcassets in Resources */,
+				8FFEDF8F2E492B660019E581 /* Tetromino_I2_2.png in Resources */,
+				8FFEDF7B2E492B660019E581 /* Tetromino_J1_1.png in Resources */,
+				8FFEDF742E492B660019E581 /* Tetromino_J1_2.png in Resources */,
+				8FFEDF8A2E492B660019E581 /* Tetromino_T2_2.png in Resources */,
+				8FFEDF7E2E492B660019E581 /* Tetromino_L1_1.png in Resources */,
+				8FFEDF772E492B660019E581 /* Tetromino_block1_2.png in Resources */,
+				8FFEDFA22E492B660019E581 /* Tetromino_T2_3.png in Resources */,
+				8FFEDF872E492B660019E581 /* Tetromino_T1_4.png in Resources */,
+				8FFEDF702E492B660019E581 /* Tetromino_J2_1.png in Resources */,
+				8FFEDF9A2E492B660019E581 /* Tetromino_Z2_2.png in Resources */,
+				8FFEDF932E492B660019E581 /* Tetromino_block1_4.png in Resources */,
+				8FFEDF842E492B660019E581 /* Tetromino_S2_2.png in Resources */,
+				8FFEDFA12E492B660019E581 /* Tetromino_block2_5.png in Resources */,
+				8FFEDF782E492B660019E581 /* Tetromino_block2_4.png in Resources */,
+				8FFEDF7F2E492B660019E581 /* Tetromino_L2_2.png in Resources */,
+				8FFEDF762E492B660019E581 /* Tetromino_I2_1.png in Resources */,
+				8FFEDF982E492B660019E581 /* Tetromino_L1_3.png in Resources */,
+				8FFEDF8B2E492B660019E581 /* Tetromino_J1_4.png in Resources */,
+				8FFEDF6F2E492B660019E581 /* Tetromino_J1_3.png in Resources */,
+				8FFEDF7C2E492B660019E581 /* Tetromino_T1_1.png in Resources */,
+				8FFEDF8C2E492B660019E581 /* Tetromino_L2_4.png in Resources */,
+				8FFEDF922E492B660019E581 /* Tetromino_I1_2.png in Resources */,
+				8FFEDF722E492B660019E581 /* Tetromino_O1_1.png in Resources */,
+				8FFEDF732E492B660019E581 /* Tetromino_block2_2.png in Resources */,
+				8FFEDF9C2E492B660019E581 /* Tetromino_L1_2.png in Resources */,
+				8FFEDF942E492B660019E581 /* Tetromino_T2_4.png in Resources */,
+				8FFEDF9D2E492B660019E581 /* Tetromino_J2_2.png in Resources */,
+				8FFEDFA02E492B660019E581 /* Tetromino_block2_7.png in Resources */,
+				8FFEDF912E492B660019E581 /* Tetromino_S1_2.png in Resources */,
+				8FFEDF892E492B660019E581 /* Tetromino_Z1_2.png in Resources */,
+				8FFEDF7A2E492B660019E581 /* Tetromino_L2_3.png in Resources */,
+				8FFEDF8D2E492B660019E581 /* Tetromino_S2_1.png in Resources */,
+				8FFEDFAF2E493CBE0019E581 /* Border.png in Resources */,
+				8FFEDF952E492B660019E581 /* Tetromino_Z1_1.png in Resources */,
+				8FFEDF802E492B660019E581 /* Tetromino_Z2_1.png in Resources */,
+				8FFEDF712E492B660019E581 /* Tetromino_J2_3.png in Resources */,
+				8FFEDF862E492B660019E581 /* Tetromino_S1_1.png in Resources */,
+				8FFEDF822E492B660019E581 /* Tetromino_T2_1.png in Resources */,
+				8FFEDF972E492B660019E581 /* Tetromino_block1_1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,8 +439,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F1F35122E3674640094FB14 /* main.cpp in Sources */,
+				8FFEDFAD2E493B7F0019E581 /* StaticImage.cpp in Sources */,
 				8F1F35162E3674B20094FB14 /* SdlManager.cpp in Sources */,
 				8F1F351A2E3676320094FB14 /* GameObject.cpp in Sources */,
+				8FFEDFAA2E492C900019E581 /* Game.cpp in Sources */,
+				8FFEDFA52E492C2D0019E581 /* Tetronimo.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

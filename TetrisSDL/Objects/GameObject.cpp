@@ -26,7 +26,9 @@ GameObject::GameObject(int initialXPos, int initialYPos, int objectWidth, int ob
         return;
     }
     
-    spriteTexture = SDL_CreateTextureFromSurface(sdlManager->getRenderer(), sprite);
+    SDL_Renderer* renderer = sdlManager->getRenderer();
+    
+    spriteTexture = SDL_CreateTextureFromSurface(renderer, sprite);
     
     if (!spriteTexture){
         cout << "Error Texture: " << SDL_GetError() << endl;
@@ -48,6 +50,10 @@ GameObject::GameObject(int initialXPos, int initialYPos, int objectWidth, int ob
     
     position.w = width;
     position.h = height;
+}
+
+void GameObject::render(SDL_Renderer* renderer){
+    SDL_RenderCopyExF(renderer, spriteTexture, NULL, &position, rotation, NULL, SDL_FLIP_NONE);
 }
 
 GameObject::~GameObject(){
