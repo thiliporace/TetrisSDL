@@ -31,6 +31,8 @@ public:
     bool isGameOver();
 
 private:
+    bool boardIsDirty;
+    
     void spawnTetromino();
     bool isValidPosition(const Tetromino& piece, int newX, int newY);
     void lockTetromino();

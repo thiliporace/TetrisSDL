@@ -32,7 +32,7 @@ Game::Game(SDL_Renderer* renderer) : renderer(renderer), fallTimer(0.0f), fallSp
     
     boardTexture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, BOARD_WIDTH * BLOCK_SIZE, BOARD_HEIGHT * BLOCK_SIZE);
     
-    updateBoardTexture();
+    boardIsDirty = true;
     
     SDL_SetTextureBlendMode(boardTexture, SDL_BLENDMODE_BLEND);
 
@@ -119,12 +119,15 @@ void Game::lockTetromino() {
             }
         }
     }
+    
+    boardIsDirty = true;
+    
     clearLines();
-    updateBoardTexture();
     spawnTetromino();
 }
 
 void Game::clearLines() {
+    bool linesWereCleared = false;
     for (int y = BOARD_HEIGHT - 1; y >= 0; --y) {
         bool lineIsFull = true;
         for (int x = 0; x < BOARD_WIDTH; ++x) {
@@ -135,12 +138,17 @@ void Game::clearLines() {
         }
 
         if (lineIsFull) {
+            linesWereCleared = true;
             for (int row = y; row > 0; --row) {
                 board[row] = board[row - 1];
             }
             board[0] = std::vector<int>(BOARD_WIDTH, 0);
             y++;
         }
+    }
+    
+    if (linesWereCleared) {
+        boardIsDirty = true;
     }
 }
 
@@ -210,6 +218,11 @@ void Game::update(float deltaTime) {
 void Game::render() {
     SDL_SetRenderDrawColor(renderer, 25, 25, 40, 255);
     SDL_RenderClear(renderer);
+    
+    if (boardIsDirty) {
+        updateBoardTexture();
+        boardIsDirty = false;
+    }
 
     int windowWidth, windowHeight;
     SDL_GetRendererOutputSize(renderer, &windowWidth, &windowHeight);
