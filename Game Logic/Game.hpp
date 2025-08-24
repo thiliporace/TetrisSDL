@@ -16,10 +16,9 @@
 #include "Tetronimo.hpp"
 #include "StaticImage.hpp"
 
-// Define the dimensions of the game board grid.
 const int BOARD_WIDTH = 10;
 const int BOARD_HEIGHT = 20;
-const int BLOCK_SIZE = 30; // Size of each block in pixels
+const int BLOCK_SIZE = 30;
 
 class Game {
 public:
@@ -37,6 +36,7 @@ private:
     void lockTetromino();
     void clearLines();
     void generateNextTetromino();
+    void updateBoardTexture();
 
     SDL_Renderer* renderer;
     std::vector<std::vector<int>> board;
@@ -44,6 +44,7 @@ private:
     std::unique_ptr<Tetromino> nextTetromino;
     
     std::unique_ptr<StaticImage> border;
+    SDL_Texture* boardTexture;
     
     std::map<TetrominoType, SDL_Texture*> blockTextures;
 

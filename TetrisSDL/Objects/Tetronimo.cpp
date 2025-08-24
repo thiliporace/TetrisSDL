@@ -57,10 +57,6 @@ Tetromino::Tetromino(TetrominoType type, int startX, int startY)
     }
 }
 
-void Tetromino::update(float deltaTime) {
-    
-}
-
 void Tetromino::rotateShape() {
     std::vector<std::vector<int>> tempShape = shape;
     int n = shape.size();

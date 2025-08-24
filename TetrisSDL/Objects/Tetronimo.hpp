@@ -23,7 +23,6 @@ class Tetromino : public GameObject {
 public:
     Tetromino(TetrominoType type, int startX, int startY);
 
-    void update(float deltaTime) override;
     void rotateShape();
 
     std::vector<std::vector<int>> shape;

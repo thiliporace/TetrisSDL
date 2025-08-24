@@ -32,7 +32,7 @@ int main(){
     
     SDL_Renderer* renderer = sdlManager->getRenderer();
     
-    auto game = std::make_unique<Game>(renderer);
+    std::unique_ptr<Game> game = std::make_unique<Game>(renderer);
     
     SDL_Event event;
     bool quit = false;
