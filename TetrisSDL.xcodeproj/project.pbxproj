@@ -19,6 +19,7 @@
 		8F1F35122E3674640094FB14 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F35112E3674640094FB14 /* main.cpp */; };
 		8F1F35162E3674B20094FB14 /* SdlManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F35142E3674B20094FB14 /* SdlManager.cpp */; };
 		8F1F351A2E3676320094FB14 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F35182E3676320094FB14 /* GameObject.cpp */; };
+		8FBB97FD2E5B75CA003745BC /* AssetLocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8FBB97FB2E5B75CA003745BC /* AssetLocator.cpp */; };
 		8FFEDF6F2E492B660019E581 /* Tetromino_J1_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF3B2E492B650019E581 /* Tetromino_J1_3.png */; };
 		8FFEDF702E492B660019E581 /* Tetromino_J2_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF3C2E492B650019E581 /* Tetromino_J2_1.png */; };
 		8FFEDF712E492B660019E581 /* Tetromino_J2_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFEDF3D2E492B650019E581 /* Tetromino_J2_3.png */; };
@@ -107,6 +108,8 @@
 		8F1F35152E3674B20094FB14 /* SdlManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SdlManager.hpp; sourceTree = "<group>"; };
 		8F1F35182E3676320094FB14 /* GameObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameObject.cpp; sourceTree = "<group>"; };
 		8F1F35192E3676320094FB14 /* GameObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameObject.hpp; sourceTree = "<group>"; };
+		8FBB97FB2E5B75CA003745BC /* AssetLocator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AssetLocator.cpp; sourceTree = "<group>"; };
+		8FBB97FC2E5B75CA003745BC /* AssetLocator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AssetLocator.hpp; sourceTree = "<group>"; };
 		8FFEDF3B2E492B650019E581 /* Tetromino_J1_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_J1_3.png; path = ../../../../Downloads/Tetrominoes/Tetromino_J1_3.png; sourceTree = "<group>"; };
 		8FFEDF3C2E492B650019E581 /* Tetromino_J2_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_J2_1.png; path = ../../../../Downloads/Tetrominoes/Tetromino_J2_1.png; sourceTree = "<group>"; };
 		8FFEDF3D2E492B650019E581 /* Tetromino_J2_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tetromino_J2_3.png; path = ../../../../Downloads/Tetrominoes/Tetromino_J2_3.png; sourceTree = "<group>"; };
@@ -186,6 +189,7 @@
 		8F1F34E72E3673B40094FB14 = {
 			isa = PBXGroup;
 			children = (
+				8FBB97FA2E5B75BD003745BC /* Service Locator */,
 				8FFEDFA72E492C880019E581 /* Game Logic */,
 				8FF73E1A2E49200300038010 /* Assets */,
 				8F1F34F22E3673B40094FB14 /* TetrisSDL */,
@@ -245,6 +249,15 @@
 				8FFEDFAC2E493B7F0019E581 /* StaticImage.hpp */,
 			);
 			path = Objects;
+			sourceTree = "<group>";
+		};
+		8FBB97FA2E5B75BD003745BC /* Service Locator */ = {
+			isa = PBXGroup;
+			children = (
+				8FBB97FB2E5B75CA003745BC /* AssetLocator.cpp */,
+				8FBB97FC2E5B75CA003745BC /* AssetLocator.hpp */,
+			);
+			path = "Service Locator";
 			sourceTree = "<group>";
 		};
 		8FF73E1A2E49200300038010 /* Assets */ = {
@@ -440,6 +453,7 @@
 			files = (
 				8F1F35122E3674640094FB14 /* main.cpp in Sources */,
 				8FFEDFAD2E493B7F0019E581 /* StaticImage.cpp in Sources */,
+				8FBB97FD2E5B75CA003745BC /* AssetLocator.cpp in Sources */,
 				8F1F35162E3674B20094FB14 /* SdlManager.cpp in Sources */,
 				8F1F351A2E3676320094FB14 /* GameObject.cpp in Sources */,
 				8FFEDFAA2E492C900019E581 /* Game.cpp in Sources */,

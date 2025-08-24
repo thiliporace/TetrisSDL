@@ -9,10 +9,11 @@
 #include <SDL2/SDL.h>
 #include <iostream>
 #include <list>
+#include <functional>
 
 #include "SdlManager.hpp"
-#include <functional>
 #include "SdlManager.hpp"
+#include "AssetLocator.hpp"
 #include "Game.hpp"
 
 using namespace std;
@@ -31,6 +32,10 @@ int main(){
     SdlManager* sdlManager = SdlManager::getInstance();
     
     SDL_Renderer* renderer = sdlManager->getRenderer();
+    
+    Locator::initialize();
+    auto assetService = std::make_unique<AssetService>(renderer);
+    Locator::provide(assetService.get());
     
     std::unique_ptr<Game> game = std::make_unique<Game>(renderer);
     

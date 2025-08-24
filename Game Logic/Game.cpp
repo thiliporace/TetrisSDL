@@ -6,29 +6,23 @@
 //
 
 #include "Game.hpp"
+#include "AssetLocator.hpp"
+
 #include <random>
 #include <iostream>
-
-SDL_Texture* loadBlockTexture(SDL_Renderer* renderer, const std::string& path) {
-    SDL_Texture* newTexture = IMG_LoadTexture(renderer, path.c_str());
-    if (newTexture == nullptr) {
-        std::cout << "Failed to load texture " << path << "! Error: " << IMG_GetError() << std::endl;
-    }
-    return newTexture;
-}
 
 Game::Game(SDL_Renderer* renderer) : renderer(renderer), fallTimer(0.0f), fallSpeed(0.5f), gameOver(false) {
     board.resize(BOARD_HEIGHT, std::vector<int>(BOARD_WIDTH, 0));
     
     border = std::make_unique<StaticImage>(renderer, "border.png", 200, -100);
     
-    blockTextures[TetrominoType::I] = loadBlockTexture(renderer, "Tetromino_block1_1.png");
-    blockTextures[TetrominoType::O] = loadBlockTexture(renderer, "Tetromino_block1_2.png");
-    blockTextures[TetrominoType::T] = loadBlockTexture(renderer, "Tetromino_block1_3.png");
-    blockTextures[TetrominoType::L] = loadBlockTexture(renderer, "Tetromino_block1_4.png");
-    blockTextures[TetrominoType::J] = loadBlockTexture(renderer, "Tetromino_block1_5.png");
-    blockTextures[TetrominoType::S] = loadBlockTexture(renderer, "Tetromino_block1_6.png");
-    blockTextures[TetrominoType::Z] = loadBlockTexture(renderer, "Tetromino_block1_7.png");
+    blockTextures[TetrominoType::I] = Locator::getAssetService().getTexture("Tetromino_block1_1.png");
+    blockTextures[TetrominoType::O] = Locator::getAssetService().getTexture("Tetromino_block1_2.png");
+    blockTextures[TetrominoType::T] = Locator::getAssetService().getTexture("Tetromino_block1_3.png");
+    blockTextures[TetrominoType::L] = Locator::getAssetService().getTexture("Tetromino_block1_4.png");
+    blockTextures[TetrominoType::J] = Locator::getAssetService().getTexture("Tetromino_block1_5.png");
+    blockTextures[TetrominoType::S] = Locator::getAssetService().getTexture("Tetromino_block1_6.png");
+    blockTextures[TetrominoType::Z] = Locator::getAssetService().getTexture("Tetromino_block1_7.png");
     
     boardTexture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, BOARD_WIDTH * BLOCK_SIZE, BOARD_HEIGHT * BLOCK_SIZE);
     
@@ -41,11 +35,6 @@ Game::Game(SDL_Renderer* renderer) : renderer(renderer), fallTimer(0.0f), fallSp
 }
 
 Game::~Game() {
-    for (auto const& [key, tex] : blockTextures) {
-        SDL_DestroyTexture(tex);
-    }
-    blockTextures.clear();
-    
     SDL_DestroyTexture(boardTexture);
 }
 

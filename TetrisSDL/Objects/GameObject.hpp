@@ -13,16 +13,13 @@
 #include <list>
 #include <SDL2/SDL.h>
 
+#include "AssetLocator.hpp"
+
 class GameObject {
 private:
     SDL_Texture* spriteTexture;
     
     float width,height;
-
-protected:
-    bool isAlive;
-    
-    SDL_Surface* sprite;
 
 public:
     SDL_FRect position;
@@ -34,17 +31,9 @@ public:
     GameObject(int initialXPos, int initialYPos, int objectWidth, int objectHeight, const std::string& assetName,
                float xSpeed = 0, float ySpeed = 0, float rotation = 0);
     
-    virtual void update(float deltaTime) = 0;
-    
     virtual void render(SDL_Renderer* renderer);
-    
-    double degreesToRadians(double degrees);
-    
+
     SDL_Texture* getTexture();
-    
-    bool getIsAlive();
-    
-    void setIsAlive(bool b);
     
     virtual ~GameObject();
 };
