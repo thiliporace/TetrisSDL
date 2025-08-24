@@ -25,7 +25,8 @@ public:
 
     void rotateShape();
 
-    std::vector<std::vector<int>> shape;
+    std::array<std::array<int, 4>, 4> shape;
+    std::array<std::array<int, 4>, 4> getShapeForType(TetrominoType type);
     TetrominoType type;
 };
 #endif /* Tetronimo_hpp */

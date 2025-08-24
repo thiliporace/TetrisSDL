@@ -31,26 +31,29 @@ public:
     bool isGameOver();
 
 private:
-    void spawnTetromino();
-    bool isValidPosition(const Tetromino& piece, int newX, int newY);
-    void lockTetromino();
-    void clearLines();
-    void generateNextTetromino();
-    void updateBoardTexture();
+    int& boardAt(int x, int y); // CHANGED
 
-    SDL_Renderer* renderer;
-    std::vector<std::vector<int>> board;
-    std::unique_ptr<Tetromino> currentTetromino;
-    std::unique_ptr<Tetromino> nextTetromino;
-    
-    std::unique_ptr<StaticImage> border;
-    SDL_Texture* boardTexture;
-    
-    std::map<TetrominoType, SDL_Texture*> blockTextures;
+        void spawnTetromino();
+        bool isValidPosition(const Tetromino& piece, int newX, int newY);
+        void lockTetromino();
+        void clearLines();
+        void generateNextTetromino();
+        void updateBoardTexture();
 
-    float fallTimer;
-    float fallSpeed;
-    bool gameOver;
+        SDL_Renderer* renderer;
+    
+        std::vector<int> board;
+        std::unique_ptr<Tetromino> currentTetromino;
+        std::unique_ptr<Tetromino> nextTetromino;
+
+        std::unique_ptr<StaticImage> border;
+        SDL_Texture* boardTexture;
+
+        std::array<SDL_Texture*, 7> blockTextures;
+
+        float fallTimer;
+        float fallSpeed;
+        bool gameOver;
 };
 
 #endif /* Game_hpp */

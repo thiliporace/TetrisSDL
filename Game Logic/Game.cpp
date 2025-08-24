@@ -18,17 +18,25 @@ SDL_Texture* loadBlockTexture(SDL_Renderer* renderer, const std::string& path) {
 }
 
 Game::Game(SDL_Renderer* renderer) : renderer(renderer), fallTimer(0.0f), fallSpeed(0.5f), gameOver(false) {
-    board.resize(BOARD_HEIGHT, std::vector<int>(BOARD_WIDTH, 0));
-    
-    border = std::make_unique<StaticImage>(renderer, "border.png", 200, -100);
-    
-    blockTextures[TetrominoType::I] = loadBlockTexture(renderer, "Tetromino_block1_1.png");
-    blockTextures[TetrominoType::O] = loadBlockTexture(renderer, "Tetromino_block1_2.png");
-    blockTextures[TetrominoType::T] = loadBlockTexture(renderer, "Tetromino_block1_3.png");
-    blockTextures[TetrominoType::L] = loadBlockTexture(renderer, "Tetromino_block1_4.png");
-    blockTextures[TetrominoType::J] = loadBlockTexture(renderer, "Tetromino_block1_5.png");
-    blockTextures[TetrominoType::S] = loadBlockTexture(renderer, "Tetromino_block1_6.png");
-    blockTextures[TetrominoType::Z] = loadBlockTexture(renderer, "Tetromino_block1_7.png");
+    board.resize(BOARD_WIDTH * BOARD_HEIGHT, 0);
+        
+        border = std::make_unique<StaticImage>(renderer, "border.png", 200, -100);
+        
+        // CHANGED: Load textures into the array.
+        blockTextures[static_cast<int>(TetrominoType::I)] = loadBlockTexture(renderer, "Tetromino_block1_1.png");
+        blockTextures[static_cast<int>(TetrominoType::O)] = loadBlockTexture(renderer, "Tetromino_block1_2.png");
+        blockTextures[static_cast<int>(TetrominoType::T)] = loadBlockTexture(renderer, "Tetromino_block1_3.png");
+        blockTextures[static_cast<int>(TetrominoType::L)] = loadBlockTexture(renderer, "Tetromino_block1_4.png");
+        blockTextures[static_cast<int>(TetrominoType::J)] = loadBlockTexture(renderer, "Tetromino_block1_5.png");
+        blockTextures[static_cast<int>(TetrominoType::S)] = loadBlockTexture(renderer, "Tetromino_block1_6.png");
+        blockTextures[static_cast<int>(TetrominoType::Z)] = loadBlockTexture(renderer, "Tetromino_block1_7.png");
+        
+        boardTexture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, BOARD_WIDTH * BLOCK_SIZE, BOARD_HEIGHT * BLOCK_SIZE);
+        
+        updateBoardTexture();
+        SDL_SetTextureBlendMode(boardTexture, SDL_BLENDMODE_BLEND);
+        generateNextTetromino();
+        spawnTetromino();
     
     boardTexture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, BOARD_WIDTH * BLOCK_SIZE, BOARD_HEIGHT * BLOCK_SIZE);
     
@@ -41,30 +49,34 @@ Game::Game(SDL_Renderer* renderer) : renderer(renderer), fallTimer(0.0f), fallSp
 }
 
 Game::~Game() {
-    for (auto const& [key, tex] : blockTextures) {
-        SDL_DestroyTexture(tex);
+    for (SDL_Texture* tex : blockTextures) {
+        if (tex) SDL_DestroyTexture(tex);
     }
-    blockTextures.clear();
+        SDL_DestroyTexture(boardTexture);
     
     SDL_DestroyTexture(boardTexture);
 }
 
+int& Game::boardAt(int x, int y) {
+    return board[y * BOARD_WIDTH + x];
+}
+
 void Game::updateBoardTexture() {
     SDL_SetRenderTarget(renderer, boardTexture);
-
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
     SDL_RenderClear(renderer);
 
     for (int y = 0; y < BOARD_HEIGHT; ++y) {
         for (int x = 0; x < BOARD_WIDTH; ++x) {
-            if (board[y][x] != 0) {
-                TetrominoType type = static_cast<TetrominoType>(board[y][x] - 1);
-                SDL_Texture* tex = blockTextures[type];
+            if (boardAt(x, y) != 0) {
+                TetrominoType type = static_cast<TetrominoType>(boardAt(x, y) - 1);
+                SDL_Texture* tex = blockTextures[static_cast<int>(type)];
                 SDL_Rect blockRect = { x * BLOCK_SIZE, y * BLOCK_SIZE, BLOCK_SIZE, BLOCK_SIZE };
                 SDL_RenderCopy(renderer, tex, NULL, &blockRect);
             }
         }
     }
+   
 
     SDL_SetRenderTarget(renderer, NULL);
 }
@@ -96,7 +108,8 @@ bool Game::isValidPosition(const Tetromino& piece, int newX, int newY) {
                 if (boardX < 0 || boardX >= BOARD_WIDTH || boardY >= BOARD_HEIGHT) {
                     return false;
                 }
-                if (boardY >= 0 && board[boardY][boardX] != 0) {
+
+                if (boardY >= 0 && boardAt(boardX, boardY) != 0) {
                     return false;
                 }
             }
@@ -114,7 +127,7 @@ void Game::lockTetromino() {
                 int boardX = currentTetromino->position.x + j;
                 int boardY = currentTetromino->position.y + i;
                 if (boardY >= 0) {
-                    board[boardY][boardX] = blockType;
+                    boardAt(boardX, boardY) = blockType;
                 }
             }
         }
@@ -125,23 +138,29 @@ void Game::lockTetromino() {
 }
 
 void Game::clearLines() {
-    for (int y = BOARD_HEIGHT - 1; y >= 0; --y) {
+    std::vector<int> newBoard;
+    newBoard.reserve(BOARD_WIDTH * BOARD_HEIGHT);
+
+    for (int y = 0; y < BOARD_HEIGHT; ++y) {
         bool lineIsFull = true;
         for (int x = 0; x < BOARD_WIDTH; ++x) {
-            if (board[y][x] == 0) {
+            if (boardAt(x, y) == 0) {
                 lineIsFull = false;
                 break;
             }
         }
 
-        if (lineIsFull) {
-            for (int row = y; row > 0; --row) {
-                board[row] = board[row - 1];
+        if (!lineIsFull) {
+            for (int x = 0; x < BOARD_WIDTH; ++x) {
+                newBoard.push_back(boardAt(x, y));
             }
-            board[0] = std::vector<int>(BOARD_WIDTH, 0);
-            y++;
         }
     }
+
+    int clearedLines = BOARD_HEIGHT - (newBoard.size() / BOARD_WIDTH);
+    board.assign(BOARD_WIDTH * BOARD_HEIGHT, 0);
+
+    std::copy(newBoard.begin(), newBoard.end(), board.begin() + (clearedLines * BOARD_WIDTH));
 }
 
 void Game::handleInput(const SDL_Event& event) {

@@ -27,39 +27,71 @@ std::string getAssetPathForType(TetrominoType type) {
 }
 
 Tetromino::Tetromino(TetrominoType type, int startX, int startY)
-    : GameObject(startX, startY, 30, 30, getAssetPathForType(type)), type(type) {
+    : GameObject(startX, startY, 30, 30, getAssetPathForType(type)), type(type), shape(getShapeForType(type)) {
     
     this->position.x = startX;
     this->position.y = startY;
+}
 
+std::array<std::array<int, 4>, 4> Tetromino::getShapeForType(TetrominoType type) {
     switch (type) {
         case TetrominoType::I:
-            shape = {{0, 0, 0, 0}, {1, 1, 1, 1}, {0, 0, 0, 0}, {0, 0, 0, 0}};
-            break;
+            return {{
+                {0, 0, 0, 0},
+                {1, 1, 1, 1},
+                {0, 0, 0, 0},
+                {0, 0, 0, 0}
+            }};
         case TetrominoType::O:
-            shape = {{0, 1, 1, 0}, {0, 1, 1, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}};
-            break;
+            return {{
+                {0, 1, 1, 0},
+                {0, 1, 1, 0},
+                {0, 0, 0, 0},
+                {0, 0, 0, 0}
+            }};
         case TetrominoType::T:
-            shape = {{0, 1, 0, 0}, {1, 1, 1, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}};
-            break;
+            return {{
+                {0, 1, 0, 0},
+                {1, 1, 1, 0},
+                {0, 0, 0, 0},
+                {0, 0, 0, 0}
+            }};
         case TetrominoType::L:
-            shape = {{0, 0, 1, 0}, {1, 1, 1, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}};
-            break;
+            return {{
+                {0, 0, 1, 0},
+                {1, 1, 1, 0},
+                {0, 0, 0, 0},
+                {0, 0, 0, 0}
+            }};
         case TetrominoType::J:
-            shape = {{1, 0, 0, 0}, {1, 1, 1, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}};
-            break;
+            return {{
+                {1, 0, 0, 0},
+                {1, 1, 1, 0},
+                {0, 0, 0, 0},
+                {0, 0, 0, 0}
+            }};
         case TetrominoType::S:
-            shape = {{0, 1, 1, 0}, {1, 1, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}};
-            break;
+            return {{
+                {0, 1, 1, 0},
+                {1, 1, 0, 0},
+                {0, 0, 0, 0},
+                {0, 0, 0, 0}
+            }};
         case TetrominoType::Z:
-            shape = {{1, 1, 0, 0}, {0, 1, 1, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}};
-            break;
+            return {{
+                {1, 1, 0, 0},
+                {0, 1, 1, 0},
+                {0, 0, 0, 0},
+                {0, 0, 0, 0}
+            }};
     }
+    return {};
 }
 
 void Tetromino::rotateShape() {
-    std::vector<std::vector<int>> tempShape = shape;
-    int n = shape.size();
+    auto tempShape = shape;
+    const int n = shape.size();
+    
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
             shape[i][j] = tempShape[n - 1 - j][i];
