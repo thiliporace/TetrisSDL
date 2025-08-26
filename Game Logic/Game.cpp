@@ -17,12 +17,11 @@ SDL_Texture* loadBlockTexture(SDL_Renderer* renderer, const std::string& path) {
     return newTexture;
 }
 
-Game::Game(SDL_Renderer* renderer) : renderer(renderer), fallTimer(0.0f), fallSpeed(0.5f), gameOver(false) {
+Game::Game(SDL_Renderer* renderer) : renderer(renderer), fallTimer(0.0f), fallSpeed(0.5f) {
     board.resize(BOARD_WIDTH * BOARD_HEIGHT, 0);
         
         border = std::make_unique<StaticImage>(renderer, "border.png", 200, -100);
         
-        // CHANGED: Load textures into the array.
         blockTextures[static_cast<int>(TetrominoType::I)] = loadBlockTexture(renderer, "Tetromino_block1_1.png");
         blockTextures[static_cast<int>(TetrominoType::O)] = loadBlockTexture(renderer, "Tetromino_block1_2.png");
         blockTextures[static_cast<int>(TetrominoType::T)] = loadBlockTexture(renderer, "Tetromino_block1_3.png");
@@ -87,14 +86,20 @@ void Game::generateNextTetromino() {
 }
 
 void Game::spawnTetromino() {
-    currentTetromino = std::move(nextTetromino);
-    currentTetromino->position.x = 3;
-    currentTetromino->position.y = 0;
+    if (gameOver) return;
+    
+    auto newPiece = std::move(nextTetromino);
 
-    generateNextTetromino();
+    if (isValidPosition(*newPiece, newPiece->position.x, newPiece->position.y)) {
+        newPiece->position.x = 3;
+        newPiece->position.y = 0;
+        
+        currentTetromino = std::move(newPiece);
 
-    if (!isValidPosition(*currentTetromino, currentTetromino->position.x, currentTetromino->position.y)) {
+        generateNextTetromino();
+    } else {
         gameOver = true;
+        std::cout << "Game Over" << std::endl;
     }
 }
 
@@ -210,9 +215,6 @@ void Game::handleInput(const SDL_Event& event) {
 }
 
 void Game::update(float deltaTime) {
-    if (gameOver) {
-        return;
-    }
     
     fallTimer += deltaTime;
     
@@ -282,8 +284,4 @@ void Game::render() {
     }
 
     SDL_RenderPresent(renderer);
-}
-
-bool Game::isGameOver() {
-    return gameOver;
 }

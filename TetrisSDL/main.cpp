@@ -32,8 +32,6 @@ int main(){
     
     SDL_Renderer* renderer = sdlManager->getRenderer();
     
-    std::unique_ptr<Game> game = std::make_unique<Game>(renderer);
-    
     SDL_Event event;
     bool quit = false;
     
@@ -45,27 +43,7 @@ int main(){
     int renderFrames = 0;
     int updateFrames = 0;
     
-    std::function<void(const SDL_Event&)> currentHandleInput;
-    std::function<void(float)> currentUpdate;
-
-    auto gameOverUpdate = [](float dt){};
-    auto gameOverInput = [](const SDL_Event& e){};
-
-    auto playingUpdate = [&](float dt) {
-        game->update(dt);
-        if (game->isGameOver()) {
-            std::cout << "Game Over!" << std::endl;
-            currentUpdate = gameOverUpdate;
-            currentHandleInput = gameOverInput;
-        }
-    };
-    
-    auto playingInput = [&](const SDL_Event& e) {
-        game->handleInput(e);
-    };
-
-    currentUpdate = playingUpdate;
-    currentHandleInput = playingInput;
+    std::unique_ptr<Game> game = std::make_unique<Game>(renderer);
     
     while (!quit){
        double current = getCurrentTime();
@@ -80,13 +58,12 @@ int main(){
                    quit = true;
                    break;
            }
-           currentHandleInput(event);
-           
+           game->handleInput(event);
        }
        
        //Usando o Game Programming Pattern Update pra manter uma taxa de frames fixa, com um time step fixo e uma renderização variável (como não passamos lag residual pra renderização, em máquinas mais lentas a renderização pode ocorrer menos frequentemente que o update, causando artefatos visuais. Como essa máquina é meio goat 🐐 (bode 🐐) a renderização sempre roda mais rápido (uns 1000fps enquanto o update roda a uma taxa fixa))
        while (lag >= MS_PER_UPDATE){
-           currentUpdate(MS_PER_UPDATE);
+           game->update(MS_PER_UPDATE);
            updateFrames++;
            lag -= MS_PER_UPDATE;
        }

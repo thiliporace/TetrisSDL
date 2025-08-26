@@ -28,32 +28,32 @@ public:
     void handleInput(const SDL_Event& event);
     void update(float deltaTime);
     void render();
-    bool isGameOver();
 
 private:
     int& boardAt(int x, int y); // CHANGED
 
-        void spawnTetromino();
-        bool isValidPosition(const Tetromino& piece, int newX, int newY);
-        void lockTetromino();
-        void clearLines();
-        void generateNextTetromino();
-        void updateBoardTexture();
+    void spawnTetromino();
+    bool isValidPosition(const Tetromino& piece, int newX, int newY);
+    void lockTetromino();
+    void clearLines();
+    void generateNextTetromino();
+    void updateBoardTexture();
 
-        SDL_Renderer* renderer;
+    SDL_Renderer* renderer;
     
-        std::vector<int> board;
-        std::unique_ptr<Tetromino> currentTetromino;
-        std::unique_ptr<Tetromino> nextTetromino;
+    bool gameOver;
+    
+    std::vector<int> board;
+    std::unique_ptr<Tetromino> currentTetromino;
+    std::unique_ptr<Tetromino> nextTetromino;
 
-        std::unique_ptr<StaticImage> border;
-        SDL_Texture* boardTexture;
+    std::unique_ptr<StaticImage> border;
+    SDL_Texture* boardTexture;
 
-        std::array<SDL_Texture*, 7> blockTextures;
+    std::array<SDL_Texture*, 7> blockTextures;
 
-        float fallTimer;
-        float fallSpeed;
-        bool gameOver;
+    float fallTimer;
+    float fallSpeed;
 };
 
 #endif /* Game_hpp */
