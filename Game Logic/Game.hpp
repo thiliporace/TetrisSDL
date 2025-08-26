@@ -33,6 +33,9 @@ public:
 private:
     bool boardIsDirty;
     
+    int boardOffsetX;
+    int boardOffsetY;
+    
     void spawnTetromino();
     bool isValidPosition(const Tetromino& piece, int newX, int newY);
     void lockTetromino();

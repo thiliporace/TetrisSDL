@@ -30,6 +30,12 @@ Game::Game(SDL_Renderer* renderer) : renderer(renderer), fallTimer(0.0f), fallSp
     blockTextures[TetrominoType::S] = loadBlockTexture(renderer, "Tetromino_block1_6.png");
     blockTextures[TetrominoType::Z] = loadBlockTexture(renderer, "Tetromino_block1_7.png");
     
+    int windowWidth, windowHeight;
+    SDL_GetRendererOutputSize(renderer, &windowWidth, &windowHeight);
+    
+    boardOffsetX = (windowWidth - (BOARD_WIDTH * BLOCK_SIZE)) / 2;
+    boardOffsetY = (windowHeight - (BOARD_HEIGHT * BLOCK_SIZE)) / 2;
+    
     boardTexture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, BOARD_WIDTH * BLOCK_SIZE, BOARD_HEIGHT * BLOCK_SIZE);
     
     boardIsDirty = true;
@@ -224,14 +230,8 @@ void Game::render() {
         boardIsDirty = false;
     }
 
-    int windowWidth, windowHeight;
-    SDL_GetRendererOutputSize(renderer, &windowWidth, &windowHeight);
-
     int boardPixelWidth = BOARD_WIDTH * BLOCK_SIZE;
     int boardPixelHeight = BOARD_HEIGHT * BLOCK_SIZE;
-    
-    int boardOffsetX = (windowWidth - boardPixelWidth) / 2;
-    int boardOffsetY = (windowHeight - boardPixelHeight) / 2;
 
     SDL_Rect boardDestRect = { boardOffsetX, boardOffsetY, boardPixelWidth, boardPixelHeight };
     SDL_RenderCopy(renderer, boardTexture, NULL, &boardDestRect);
