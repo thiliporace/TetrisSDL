@@ -145,6 +145,8 @@ void Game::clearLines() {
 }
 
 void Game::handleInput(const SDL_Event& event) {
+    if(gameOver) return;
+    
     if (event.type == SDL_KEYDOWN) {
         float currentX = currentTetromino->position.x;
         float currentY = currentTetromino->position.y;

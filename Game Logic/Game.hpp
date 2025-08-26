@@ -33,10 +33,10 @@ public:
 private:
     void spawnTetromino();
     bool isValidPosition(const Tetromino& piece, int newX, int newY);
-    void lockTetromino();
     void clearLines();
     void generateNextTetromino();
     void updateBoardTexture();
+    void lockTetromino();
 
     SDL_Renderer* renderer;
     std::vector<std::vector<int>> board;
